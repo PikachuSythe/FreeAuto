@@ -5,12 +5,10 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
-	
+
 //Configure in Sythe
-	
-	
     @Override
-	public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws Exception {
         SytheGUI game = new SytheGUI(stage);
         stage.getScene().setRoot(game.getRootPane());
     }

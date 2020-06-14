@@ -7,6 +7,7 @@ package Sythe;
 
 import Discord.Discord;
 import Main.JavaFXlib;
+import Main.Readfile;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,8 +30,8 @@ import javax.security.auth.login.LoginException;
 public class SytheGUI {
 
     public static String SytheUsername;
-    public static String ServerId = "332819492499619843";
-    public static String discordLogInID = "NzA2ODYxNDgyNjM3NTI1MDky.XuZWew.JPqKQW5nuFswzqVZrjU7l2f_yEg";
+    public static String ServerId;
+    public static String discordLogInID;
 
     private final Pane rootPane;
 
@@ -59,6 +60,7 @@ public class SytheGUI {
     private static boolean login = false;
 
     public SytheGUI(Stage primaryStage) {
+        Readfile.data();
 
         rootPane = new StackPane();
         FX = new JavaFXlib(rootPane);

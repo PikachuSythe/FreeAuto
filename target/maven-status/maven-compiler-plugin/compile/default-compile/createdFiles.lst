@@ -7,4 +7,5 @@ Sythe\SytheGUI.class
 Discord\Builders.class
 Discord\App$1.class
 Main\JavaFXlib.class
+Main\Readfile.class
 Discord\TimedEvents$autoBump.class
