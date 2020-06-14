@@ -1,0 +1,10 @@
+Discord\TimedEvents.class
+Discord\Discord.class
+Main\MainApp.class
+Discord\App.class
+Sythe\PostRequests.class
+Sythe\SytheGUI.class
+Discord\Builders.class
+Discord\App$1.class
+Main\JavaFXlib.class
+Discord\TimedEvents$autoBump.class
