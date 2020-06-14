@@ -167,10 +167,10 @@ public class App extends ListenerAdapter {
 			}
 
 			
-			if (objMsg.getContentRaw().equalsIgnoreCase(prexfix + "autobumper") && BumpCycle == false) {
+			if (objMsg.getContentRaw().equalsIgnoreCase(prexfix + "autobump") && BumpCycle == false) {
 				OnlineUser = Author.getId();
 				StatusBump = Executors.newScheduledThreadPool(1);
-				StatusBump.scheduleWithFixedDelay(new TimedEvents.autoBump(), 0, 300, SECONDS);
+				StatusBump.scheduleWithFixedDelay(new TimedEvents.autoBump(), 0, 4, TimeUnit.HOURS);
 				BumpCycle = true;
 				build.messageBuilder(null, build.Time(), Author.getAsMention() + " has started the auto bump process",
 						null, "white", Author);
@@ -240,8 +240,8 @@ public class App extends ListenerAdapter {
 								+ "\n !hours <Time> -Set how many hours your auto bump  (only effects autobump)"
 								+ "\n !checkmessage - Displayed all thread messages" + "\n !end - stop all bumps"
 								+ "\n !list - lists all the threads you are bumping"
-								// + "\n !autobump - bumps every 8 hours"
-								+ "\n !statusbump - only bumps when you are online" + "\n !bump - bumps all threads"
+								 + "\n !autobump - bumps every 4 hours"
+//								+ "\n !statusbump - only bumps when you are online" + "\n !bump - bumps all threads"
 								+ "\n !shutdown - shutdown the whole system.",
 						"comands", "white", Author);
 			}

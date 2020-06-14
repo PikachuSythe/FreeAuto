@@ -29,8 +29,8 @@ import javax.security.auth.login.LoginException;
 public class SytheGUI {
 
     public static String SytheUsername;
-    public static String ServerId = "";
-    public static String discordLogInID = "";
+    public static String ServerId = "332819492499619843";
+    public static String discordLogInID = "NzA2ODYxNDgyNjM3NTI1MDky.XuZWew.JPqKQW5nuFswzqVZrjU7l2f_yEg";
 
     private final Pane rootPane;
 
