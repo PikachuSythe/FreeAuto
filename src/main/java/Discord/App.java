@@ -241,7 +241,6 @@ public class App extends ListenerAdapter {
 								+ "\n !checkmessage - Displayed all thread messages" + "\n !end - stop all bumps"
 								+ "\n !list - lists all the threads you are bumping"
 								 + "\n !autobump - bumps every 4 hours"
-//								+ "\n !statusbump - only bumps when you are online" + "\n !bump - bumps all threads"
 								+ "\n !shutdown - shutdown the whole system.",
 						"comands", "white", Author);
 			}

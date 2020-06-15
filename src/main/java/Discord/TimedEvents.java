@@ -28,7 +28,7 @@ public class TimedEvents {
                 embed.setColor(Color.RED);
                 App.bump();
                 Member Online = jda.getGuildById(SytheGUI.ServerId).getMemberById(App.OnlineUser);
-                embed.setDescription(SytheGUI.SytheUsername + " I have auto bumped your thread.");
+                embed.setDescription(Online.getNickname() + " I have auto bumped your thread.");
                 Online.getUser().openPrivateChannel().complete().sendMessage(embed.build()).queue();
             } catch (Exception e) {
                 System.out.println(e);

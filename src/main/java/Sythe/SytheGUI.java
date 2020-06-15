@@ -60,8 +60,9 @@ public class SytheGUI {
     private static boolean login = false;
 
     public SytheGUI(Stage primaryStage) {
-        Readfile.data();
 
+        Readfile.data();
+        
         rootPane = new StackPane();
         FX = new JavaFXlib(rootPane);
 
