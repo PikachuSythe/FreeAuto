@@ -1,0 +1,2 @@
+DiscordToken="NzA2ODYxNDgyNjM3NTI1MDky.XuZWew.JPqKQW5nuFswzqVZrjU7l2f_yEg"
+DiscordServerId="332819492499619843"
