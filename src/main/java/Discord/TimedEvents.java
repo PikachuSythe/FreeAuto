@@ -36,4 +36,47 @@ public class TimedEvents {
         }
     }
 
+    public static class SytheStatus implements Runnable {
+
+        @Override
+        public void run() {
+            try {
+                System.out.println("\n ***** Status Bump ***** \n");
+                Member Online = jda.getGuildById("332819492499619843").getMemberById(App.OnlineUser);
+                String status = Online.getOnlineStatus().toString();
+                System.out.println(status);
+                EmbedBuilder embed = new EmbedBuilder();
+
+                if (BumpTime == 48) {
+                    if (status.equalsIgnoreCase("online") || status.equalsIgnoreCase("idle")
+                            || status.equalsIgnoreCase("DO_NOT_DISTURB")) {
+                        embed.setDescription("Hey " + Online.getEffectiveName() + ", I have autobumped your threads.");
+                        MessagePrint = false;
+                        TimedEvents.BumpTime = 0;
+                        App.bump();
+                        embed.setColor(Color.RED);
+                        Online.getUser().openPrivateChannel().complete().sendMessage(embed.build()).queue();
+                    } else if (status.equalsIgnoreCase("OFFLINE")) {
+                        BumpTime = 47;
+                        System.out.println("Bumping and user is offline");
+                    } else {
+                        System.out.println("Some sort of fucking error.");
+                    }
+                }
+
+                BumpTime++;
+
+                try {
+//                embed.messageBuilderChan(null, embed.Time() + " ", "" + BumpTime, "!Status", "red", null, "general");
+                } catch (Exception e) {
+                }
+            } catch (Exception e) {
+                Builders build = new Builders();
+                build.messageBuilderChan(null, build.Time() + " " + e,
+                        "Error with Status Bump (sythe) Line number: " + e.getStackTrace()[0], "!Status", "red", null,
+                        "logs");
+            }
+        }
+
+    }
 }

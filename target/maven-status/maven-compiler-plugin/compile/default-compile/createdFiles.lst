@@ -2,6 +2,7 @@ Discord\TimedEvents.class
 Discord\Discord.class
 Main\MainApp.class
 Discord\App.class
+Discord\TimedEvents$SytheStatus.class
 Sythe\PostRequests.class
 Sythe\SytheGUI.class
 Discord\Builders.class
