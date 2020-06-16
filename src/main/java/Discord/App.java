@@ -43,6 +43,7 @@ public class App extends ListenerAdapter {
     private static boolean BumpCycle = false;
     private Builders build = new Builders();
     public static boolean sytheBump = false;
+    public static String discordName; 
 
     @Override
     public void onMessageReceived(MessageReceivedEvent evt) {
@@ -52,7 +53,7 @@ public class App extends ListenerAdapter {
         guild = evt.getGuild();
         channel = evt.getChannel();
 
-        if (!Author.getId().equalsIgnoreCase(jda.getSelfUser().getId()) && Author.getName().equalsIgnoreCase(SytheGUI.SytheUsername)) {
+        if (!Author.getId().equalsIgnoreCase(jda.getSelfUser().getId()) && Author.getName().equalsIgnoreCase(discordName)) {
 
             if (objMsg.getContentRaw().contains(prexfix + "addmulti ")) {
                 try {
@@ -243,6 +244,7 @@ public class App extends ListenerAdapter {
                         + "\n !edit <thread number + 1> <message> - Updates the thread message"
                         // + "\n !bumptime - Show how long you have bump time set to (only effects
                         // autobump)"
+                        + "\n !statusbump - only bumps when you are online" + "\n !bump - bumps all threads"
                         + "\n !remove <thread id>"
                         + "\n !add <threadid> <message> - Bump thread with spefic message"
                         + "\n !hours <Time> -Set how many hours your auto bump  (only effects autobump)"

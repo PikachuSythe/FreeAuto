@@ -18,6 +18,7 @@ public class TimedEvents {
     static boolean buy = false;
     static boolean sell = false;
     public static boolean MessagePrint = true;
+    
 
     public static class autoBump implements Runnable {
 
@@ -42,7 +43,7 @@ public class TimedEvents {
         public void run() {
             try {
                 System.out.println("\n ***** Status Bump ***** \n");
-                Member Online = jda.getGuildById("332819492499619843").getMemberById(App.OnlineUser);
+                Member Online = jda.getGuildById(SytheGUI.ServerId).getMemberById(App.OnlineUser);
                 String status = Online.getOnlineStatus().toString();
                 System.out.println(status);
                 EmbedBuilder embed = new EmbedBuilder();

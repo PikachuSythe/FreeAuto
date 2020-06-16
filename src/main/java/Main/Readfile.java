@@ -5,6 +5,7 @@
  */
 package Main;
 
+import Discord.App;
 import Sythe.SytheGUI;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -33,9 +34,13 @@ public class Readfile {
 
         System.out.println(FullString);
         String[] parts = FullString.split("\"");
-        SytheGUI.ServerId = parts[3];
+      
         SytheGUI.discordLogInID = parts[1];
+        SytheGUI.ServerId = parts[3];
+        App.discordName = parts[5];
+
         System.out.println(parts[1]);
         System.out.println(parts[3]);
+        System.out.println(parts[5]);
     }
 }
