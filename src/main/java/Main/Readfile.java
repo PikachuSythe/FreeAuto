@@ -37,7 +37,7 @@ public class Readfile {
       
         SytheGUI.discordLogInID = parts[1];
         SytheGUI.ServerId = parts[3];
-        App.discordName = parts[5];
+        App.discordId = parts[5];
 
         System.out.println(parts[1]);
         System.out.println(parts[3]);

@@ -43,7 +43,7 @@ public class App extends ListenerAdapter {
     private static boolean BumpCycle = false;
     private Builders build = new Builders();
     public static boolean sytheBump = false;
-    public static String discordName; 
+    public static String discordId;
 
     @Override
     public void onMessageReceived(MessageReceivedEvent evt) {
@@ -53,7 +53,7 @@ public class App extends ListenerAdapter {
         guild = evt.getGuild();
         channel = evt.getChannel();
 
-        if (!Author.getId().equalsIgnoreCase(jda.getSelfUser().getId()) && Author.getName().equalsIgnoreCase(discordName)) {
+        if (!Author.getId().equalsIgnoreCase(jda.getSelfUser().getId()) && Author.getId().equalsIgnoreCase(discordId)) {
 
             if (objMsg.getContentRaw().contains(prexfix + "addmulti ")) {
                 try {
